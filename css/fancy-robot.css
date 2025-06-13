@@ -1,38 +1,232 @@
-.robot-container {
+
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
 }
+
+.robot-container {
+  position: static;
+  border: 15px solid;
+  margin: 200px auto;
+  background-image:linear-gradient(grey, gold );
+  border-radius: 45px;
+} 
 
 .robot-face-shape {
+  width: 700px;
+  height: 300px;
+ }
+ 
+ .antennae {
+   position:relative;
+   bottom: 380px;
+   left: 720px;
+      width: 70px;
+      height: 30px;
+      background: rgb(214, 206, 206 );
+      border-radius: 100px / 50px;
+    }
+
+
+.antennae2 {
+  position: absolute;
+  top: 365px;
+  left: 1350px;
+  --s: 50px; /* control the shape (can be percentage) */
+
+  height: 100px;
+  width: 20px;
+  clip-path: polygon(0 0,var(--s) 0,100% 50%,var(--s) 100%,0 100%,calc(100% - var(--s)) 50%);
+  background: #5E9FA3;
 }
+ 
+ 
 
 .robot-eye-left {
-}
+  position: relative;
+  top: 70px;
+  left: 90px;
+  width: 150px;
+  height: 150px;
+  background:url("https://picsum.photos/id/237/500/300") center/cover repeat-y;
+  border: 5px solid; 
+
+  }
+
+  
+
+   
+  
+
+
 
 .robot-eye-right {
+  position: relative;
+  left: 500px;
+   height: 200px; /* adjust to control the size  */
+  width: 175px;
+  clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+  background: rgb(52, 28, 95);
+  border: 5px solid;
+  bottom: 110px;
+  left: 350px;
 }
 
 .robot-ear-left {
+  position: relative;
+  bottom: 80px;
+  right: 100px;
+  width: 100px;
+  height: 200px;
+  background-color: blueviolet;
+  border: 10px solid;
+  border-radius:30px ;
 }
 
+
+
+
 .robot-ear-right {
+  position: relative;
+  bottom: 280px;
+  left: 700px;
+  width: 100px;
+  height: 200px;
+  background-color: blueviolet;
+  border: 10px solid;
+  border-radius:30px 
 }
 
 .robot-nose {
+  position: relative;
+  left: 290px;
+   width: 10%;
+  height: 25%;
+  border: 15px solid;
+  background: rgba(255, 255, 0, 0.5);
+  border-radius: 50%
+  
 }
 
 .robot-teeth {
+  position: relative;
+  left: 90px;
+  top: 60px;
+   width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 100px solid rgb(217, 205, 205 );
+
 }
 
 .robot-tooth {
+  position: absolute;
+  left: 40px;
+    width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 100px solid gold;
 }
 
+  .robot-tooth2 {
+  position: absolute;
+  left: 130px;
+   width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 100px solid rgb(209, 182, 182);
+  }
+
+  .robot-tooth3 {
+  position: absolute;
+  left: 230px;
+    width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 100px solid gold;
+  
+  }
+
+  .robot-tooth4 {
+  position: absolute;
+  left: 320px;
+   width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 100px solid rgb(202, 180, 180);
+  }
 .robot-hair-style {
+  position: relative;
 }
+
+
 
 .robot-hair-one {
+  position: absolute;
+  bottom: 655px;
+  --n: 4; /* number of bars */
+  
+  height: 160px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  --s:
+  calc(100%/(2*var(--n) - 1));
+  background:
+    repeating-radial-gradient(50% 50%,
+      #0000 0,yellow 1px calc(var(--s) - 1px),
+      #0000 var(--s) calc(2*var(--s)));
+  mask: 
+    conic-gradient(#000 0 0) no-repeat 50%/var(--s) var(--s),
+    conic-gradient(from -45deg at 50% calc(50% + var(--s)/2),
+      #000 90deg,#0000 0);
 }
 
+
+    
+
+
 .robot-hair-two {
+  position: absolute;
+  bottom: 660px;
+  left: 235px;
+    --n: 4; /* number of bars */
+    height: 200px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  --s: calc(100%/(2*var(--n) - 1));
+  background:
+    repeating-radial-gradient(50% 50%,
+      #0000 0,Orange  1px calc(var(--s) - 1px),
+      #0000 var(--s) calc(2*var(--s)));
+  mask: 
+    conic-gradient(#000 0 0) no-repeat 50%/var(--s) var(--s),
+    conic-gradient(from -45deg at 50% calc(50% + var(--s)/2),
+      #000 90deg,#bd656500 0);
 }
 
 .robot-hair-three {
+  position: absolute;
+  bottom: 655px;
+  left: 490px;
+  --n: 4; /* number of bars */
+  height: 160px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  --s:
+   calc(100%/(2*var(--n) - 1)); 
+  background:
+    repeating-radial-gradient(50% 50%,
+      #0000 0, green 1px calc(var(--s) - 1px),
+      #0000 var(--s) calc(2*var(--s)));
+  mask: 
+    conic-gradient(#000 0 0) no-repeat 50%/var(--s) var(--s),
+    conic-gradient(from -45deg at 50% calc(50% + var(--s)/2),
+      #000 90deg,#0000 0);
 }
+
